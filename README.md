@@ -14,10 +14,10 @@ Now you can add the files you'd like and make modifications on your local comput
 <pre>git push origin [your_branch_name]</pre>
 
 Now go back to GitHub in your browser and change the dropdown menu for the branch to your branch name.
-<img src="dropdown.jpg" />
+<img src="dropdown.jpg" style="width:200px;"/>
 
 Click the "New pull request" button and finish merging your pull request until you see your merge message in the master branch.
-<img src="button.jpg" />
+<img src="button.jpg" style="width:200px;"/>
 
 Once you've finished your merge, you are free to delete your branch.
 <pre>git branch -D [name_of_your_branch]</pre>
