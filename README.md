@@ -1,5 +1,5 @@
 # datasets
-A storage place for our datasets.
+A storage place for our datasets!
 # cloning
 To get started, clone this repository to your local computer. Navigate in your terminal to your desired location on your computer, and run this command:
 <p><pre>$ git clone https://github.com/lindsaycarbonell/datasets</pre></p>
@@ -12,7 +12,3 @@ Now you can add the files you'd like and make modifications on your local comput
 <p><pre>$ git branch -D [name_of_your_branch]</pre></p>
 You can also look at all of your branches with this command:
 <p><pre>$ git branch</pre></p>
-
-
-
-
