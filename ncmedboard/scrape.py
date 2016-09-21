@@ -1,4 +1,4 @@
-import csv
+# import csv
 import requests
 from BeautifulSoup import BeautifulSoup
 
@@ -11,6 +11,7 @@ list_of_rows = []
 
 soup = BeautifulSoup(html)
 table = soup.find('table', attrs={'id': 'ctl00_ContentPlaceHolder1_dtgPostGrad'})
+
 
 id_endings = ['_lblDateIssued', '_lblLicenseNumber', '_lblDateEnding']
 data = []
