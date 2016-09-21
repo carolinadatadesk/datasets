@@ -1,0 +1,934 @@
+
+
+<!DOCTYPE html>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	NCMB Licensee Information
+</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+
+
+    <style type="text/css">
+        * {
+            font-family: Calibri,sans-serif;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-size: 10pt;
+            background-color: #FFFFFF;
+
+        }
+
+        .topButtons {
+            background-color: #e6f1f9;
+            text-align: center;
+            font-weight: bold;
+            width: 33.33%;
+            font-size: 14pt;
+            cursor: pointer;
+        }
+
+        .header {
+            text-align: center;
+            font-weight: bold;
+            font-size: 26pt;
+            text-transform: uppercase;
+        }
+
+        .subHeader {
+            text-align: center;
+            font-style: italic;
+            font-size: 11pt;
+            font-weight: bold;
+        }
+
+        .blockImage {
+            display: block;
+        }
+
+        .wrapper {
+            padding: 0px 20px 10px 20px;
+            background-color: white;
+            border-left: solid 2px #a3d5ec;
+            border-right: solid 2px #a3d5ec;
+            width: 956px;
+        }
+
+        .nameText {
+            color: #017ab1;
+            font-weight: bold;
+            font-size: 20pt;
+            padding: 5px;
+        }
+
+        .headerTable {
+            margin: auto;
+            width: 875px;
+        }
+
+        .headerCell1 {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .headerCell2 {
+            font-style: italic;
+        }
+
+        .divMenu {
+            position: relative;
+            width: 100%;
+            height: 75px;
+        }
+
+        .divMenuItem {
+            position: absolute;
+            height: 35px;
+            cursor: pointer;
+        }
+
+        .divMenuItemCenter {
+            position: absolute;
+            top: 0px;
+            left: 10px;
+            height: 15px;
+            padding: 10px 0px;
+            background-image: url('/Clients/NCBOM/Images/MenuButtonCenter.png');
+        }
+
+            .divMenuItemCenter.Selected {
+                background-image: url('/Clients/NCBOM/Images/MenuButtonCenter-Active.png');
+            }
+
+            .divMenuItemCenter.Hover {
+                background-image: url('/Clients/NCBOM/Images/MenuButtonCenter-Hover.png');
+            }
+
+        .divMenuItemLeft {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 10px;
+            height: 35px;
+            background-image: url('/Clients/NCBOM/Images/MenuButtonLeft.png');
+        }
+
+            .divMenuItemLeft.Selected {
+                background-image: url('/Clients/NCBOM/Images/MenuButtonLeft-Active.png');
+            }
+
+            .divMenuItemLeft.Hover {
+                background-image: url('/Clients/NCBOM/Images/MenuButtonLeft-Hover.png');
+            }
+
+        .divMenuItemRight {
+            position: absolute;
+            top: 0px;
+            width: 10px;
+            height: 35px;
+            background-image: url('/Clients/NCBOM/Images/MenuButtonRight.png');
+        }
+
+            .divMenuItemRight.Selected {
+                background-image: url('/Clients/NCBOM/Images/MenuButtonRight-Active.png');
+            }
+
+            .divMenuItemRight.Hover {
+                background-image: url('/Clients/NCBOM/Images/MenuButtonRight-Hover.png');
+            }
+
+        .row1 {
+            top: 0px;
+        }
+
+        .row2 {
+            top: 40px;
+        }
+
+        .divDetails {
+            display: none;
+            margin-top: 20px;
+        }
+
+            .divDetails.Selected {
+                display: block;
+            }
+
+        .sectionHeader {
+            color: #0078ae;
+            font-size: 14pt;
+            font-weight: bold;
+        }
+
+        .sectionSubHeader {
+            margin-top: 25px;
+            color: #68932f;
+            font-size: 12pt;
+            font-weight: bold;
+        }
+
+        .divData {
+            margin-left: 30px;
+            margin-top: 5px;
+        }
+
+        .table {
+            width: 896px;
+            margin-left: 30px;
+            margin-top: 5px;
+            margin-right: 30px;
+
+        }
+
+            .table td {
+                vertical-align: top;
+            }
+
+        .th {
+            border-top: #a3d5ec 2px inset;
+            border-bottom: #a3d5ec 2px inset;
+            border-right: #cccccc 1px inset;
+            background-color: #DFEECA;
+            font-weight: bold;
+            padding: 2px;
+        }
+
+            .th:last-child {
+                border-right: none;
+            }
+
+        .td {
+            border-bottom: #cccccc 1px inset;
+            border-right: #cccccc 1px inset;
+            padding: 2px;
+        }
+
+            .td:last-child {
+                border-right: none;
+            }
+
+        .tableVAlign td {
+            vertical-align: top;
+        }
+
+        #page_header h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 22pt;
+            background-color: #0b77b5;
+            line-height: 42px;
+            display: block;
+            font-weight: bold;
+        }
+
+        .centerwrapper {
+            display: inline-block;
+        }
+
+        #pic {
+            top: -200px;
+            right: 0px;
+            float: right;
+            position: relative;
+        }
+
+
+
+
+    </style>
+
+     <style type="text/css" media="print">
+
+          * {
+            font-family: Arial,sans-serif;
+        }
+
+         #pic {
+             margin-left: 100px;
+             position: inherit;
+         }
+
+        .hideOnPrint {
+            display: none;
+        }
+
+         .divDetails {
+             border: solid 1px #a3d5ec;
+             display: block;
+             width: 100%;
+             padding: 15px 0px 15px 0px;
+             margin: 0px;
+         }
+
+         #headergif
+         {
+                width:60%; height: 60%;
+         }
+
+         .centerwrapper {
+            display:block;
+        }
+
+
+          .table {
+            width: 100%;
+
+
+        }
+
+           .wrapper {
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            background-color: white;
+            border: solid 2px #a3d5ec;
+            width: 95%;
+        }
+
+             #page_header h1 {
+            line-height: 22pt;
+            display: inline-block;
+        }
+
+    </style>
+
+
+    <script type="text/javascript">
+        //Calculates the width of the text inside the object.
+        $.fn.textWidth = function () {
+            var html_org = $(this).html();
+            var html_calc = '<span>' + html_org + '</span>';
+            $(this).html(html_calc);
+            var width = $(this).find('span:first').width();
+            $(this).html(html_org);
+            return width + 1;
+        };
+
+        $(document).ready(function () {
+            //Select Tab1
+            $('.divMenu').data('Selected', 1);
+
+            //For each divMenuItem
+            $('.divMenuItem').each(function () {
+                var $MenuItem = $(this);
+                var txtWidth = $MenuItem.textWidth();
+
+                //Store the text width for use when positioning the divs.
+                $MenuItem.data('TextWidth', txtWidth);
+
+                //Add the Wrapper for the center section.
+                $MenuItem.wrapInner('<div class="divMenuItemCenter" style="width: ' + txtWidth + 'px;"></div>');
+
+                //Add the Left and Right sections.
+                $MenuItem.prepend('<div class="divMenuItemLeft"></div><div class="divMenuItemRight" style="left: ' + (txtWidth + 10) + 'px;"></div>');
+
+                //Add the functions.
+                $MenuItem.mouseenter(function () {
+                    //Only do the mouseover if this is not the selected tab.
+                    if (!$(this).find('.divMenuItemCenter').hasClass('Selected')) {
+                        $(this).find('.divMenuItemCenter').addClass('Hover');
+                        $(this).find('.divMenuItemLeft').addClass('Hover');
+                        $(this).find('.divMenuItemRight').addClass('Hover');
+                    }
+                }).mouseleave(function () {
+                    $(this).find('.divMenuItemCenter').removeClass('Hover');
+                    $(this).find('.divMenuItemLeft').removeClass('Hover');
+                    $(this).find('.divMenuItemRight').removeClass('Hover');
+                }).click(function () {
+                    $('.divMenu').data('Selected', parseInt(this.id.replace('divMenuItem', '')));
+                    selectSelected();
+                });
+            });
+
+            $('.divDetails.Selected').removeClass('Selected');
+
+            var currentLeft = 0;
+
+            //For each in row1, set the position.
+            $('.row1').each(function () {
+                var $MenuItem = $(this);
+                $MenuItem.css('left', currentLeft + 'px');
+
+                currentLeft += 20;
+                currentLeft += $MenuItem.data('TextWidth');
+            });
+
+            currentLeft = 0;
+
+            //For each in row2, set the position.
+            $('.row2').each(function () {
+                var $MenuItem = $(this);
+                $MenuItem.css('left', currentLeft + 'px');
+
+                currentLeft += 20;
+                currentLeft += $MenuItem.data('TextWidth');
+            });
+
+            selectSelected();
+        });
+
+        function selectSelected() {
+            var pos = $('.divMenu').data('Selected');
+
+            //Remove selected from all.
+            $('.divMenuItemCenter.Selected').removeClass('Selected');
+            $('.divMenuItemLeft.Selected').removeClass('Selected');
+            $('.divMenuItemRight.Selected').removeClass('Selected');
+            $('.divDetails.Selected').removeClass('Selected');
+
+            //Add seleceted to the selected tab and div.
+            $('#divMenuItem' + pos + ' .divMenuItemCenter').removeClass('Hover').addClass('Selected');
+            $('#divMenuItem' + pos + ' .divMenuItemLeft').removeClass('Hover').addClass('Selected');
+            $('#divMenuItem' + pos + ' .divMenuItemRight').removeClass('Hover').addClass('Selected');
+            $('#divDetails' + pos).addClass('Selected');
+        }
+    </script>
+
+</head>
+<body style="overflow:auto;">
+    <form name="aspnetForm" method="post" action="Details.aspx?EntityID=3200624&amp;PublicFile=1" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function DisableInputs() {   document.styleSheets[0].addRule("*", "cursor: wait");   var i;   var current;   for (i = 0; current = document.getElementsByTagName('input')[i]; i++) {       if (current.type == "submit" || current.type == "button") {           current.value = "Processing...";           current.disabled = true;       }       if (current.type == "text" || current.type == "password") {           current.readOnly = true;       }       if (current.type == "radio" || current.type == "checkbox") {           current.onclick = function () {return false;}       }   }   for (i = 0; current = document.getElementsByTagName('a')[i]; i++) {       current.style.color = "Gray";       current.style.textDecoration = "none";       current.onclick = function () {return false;}   }   for (i = 0; current = document.getElementsByTagName('select')[i]; i++) {       freezeList(current);   }   for (i = 0; current = document.getElementsByTagName('textarea')[i]; i++) {       current.readOnly = true;   }}function freezeList(whichList) {   var chosen = whichList.options.selectedIndex;   whichList.onchange = function () {       whichList.options.selectedIndex = chosen;   }}//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="0733191B" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+</div>
+        <div style="text-align: center; background-color: #e6f1f9; ">
+            <br />
+            <img id="ctl00_headergif" src="../../Images/header.gif" style="border-width:0px;" />
+        </div>
+        <div style="text-align: center; margin:0px auto;">
+            <div >
+
+    <div style="background-color: #e6f1f9;">
+
+        <table class="hideOnPrint" cellpadding="0" cellspacing="0" style="width: 700px; margin: auto;">
+            <tr>
+                <td class="topButtons" onclick="window.location.href = 'http://www.ncmedboard.org/licensee_search/';">Disclaimer
+                </td>
+                <td class="topButtons" onclick="window.location.href = 'http://www.ncmedboard.org/licensee_search/glossary';">Glossary of Terms
+                </td>
+                <td class="topButtons" onclick="window.print();">Print This Page</td>
+            </tr>
+        </table>
+
+        <div id="page_header">
+        <h1>Licensee Information</h1>
+    </div>
+    </div>
+
+    <br />
+    <div class="subHeader" style="display:inline-block;">
+        Information as of
+        <span id="ctl00_ContentPlaceHolder1_lblDate">09/20/2016</span>
+        <br />
+        <br />
+        Last Updated by Licensee on
+        <span id="ctl00_ContentPlaceHolder1_lblLastUpdated">12/09/2015</span>
+    </div>
+    <br />
+
+    <div class="centerwrapper">
+    <img class="blockImage hideOnPrint" src="../../Images/WrapperTop.png" style="border-width:0px;" />
+    <div class="wrapper">
+        <div class="nameText" style="text-align:left;">
+            <span id="ctl00_ContentPlaceHolder1_lblFullName">Yasmina Laura Abajas - </span><span id="ctl00_ContentPlaceHolder1_lblLicenseType">MD</span>
+
+        </div>
+        <table cellpadding="1" cellspacing="0" class="headerTable" style="width:100%;text-align:left;">
+            <tr>
+                <td class="headerCell1">License#:</td>
+                <td class="headerCell2">
+                    <span id="ctl00_ContentPlaceHolder1_lblLicenseNumber">2012-00426</span>
+                </td>
+                <td class="headerCell1">License Status:</td>
+                <td class="headerCell2">
+                    <span id="ctl00_ContentPlaceHolder1_lblLicenseStatusID">Active</span>
+                </td>
+                <td class="headerCell1">
+                    <span id="ctl00_ContentPlaceHolder1_lblRegExpireDateLabel"></span></td>
+                <td class="headerCell2">
+                    <span id="ctl00_ContentPlaceHolder1_lblRegExpireDate"></span>
+                </td>
+                <td class="headerCell1">
+                    <span id="ctl00_ContentPlaceHolder1_Label1">Public Action:</span></td>
+                <td class="headerCell2">
+                    <span id="ctl00_ContentPlaceHolder1_lblPublicAction">No</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="headerCell1">Issue Date:</td>
+                <td class="headerCell2">
+                    <span id="ctl00_ContentPlaceHolder1_lblDateIssued">03/20/2012</span>
+                </td>
+                <td class="headerCell1"><span id="ctl00_ContentPlaceHolder1_lblRenewalLabel">Renewal Date:</span></td>
+                <td class="headerCell2">
+                    <span id="ctl00_ContentPlaceHolder1_lblDateEnding">12/10/2016</span>
+                </td>
+                <td class="headerCell1"></td>
+                <td class="headerCell2"></td>
+                <td class="headerCell1"> </td>
+                <td class="headerCell2"></td>
+            </tr>
+        </table>
+        <br />
+        <div class="divMenu hideOnPrint">
+            <div id="divMenuItem1" class="divMenuItem row1">
+                Licensee General Information
+            </div>
+            <div id="divMenuItem2" class="divMenuItem row1">
+                Practice Information
+            </div>
+            <div id="divMenuItem3" class="divMenuItem row1">
+                <span id="ctl00_ContentPlaceHolder1_lblMenuItem3">Education, Certifications & Area of Practice</span>
+            </div>
+            <div id="divMenuItem4" class="divMenuItem row1">
+                Memberships, Honors, Awards, & Public Service
+            </div>
+            <div id="divMenuItem5" class="divMenuItem row2">
+                Academic Appointments & Publications
+            </div>
+            <div id="divMenuItem6" class="divMenuItem row2">
+                Actions - Adverse & Administrative
+            </div>
+            <div id="divMenuItem7" class="divMenuItem row2">
+                Malpractice
+            </div>
+            <div id="divMenuItem8" class="divMenuItem row2">
+                Convictions
+            </div>
+        </div>
+        <div id="divDetails1" class="divDetails Selected">
+            <table>
+             <tr><td colspan="2"  style="vertical-align: top; text-align:left;"> <div class="sectionHeader" >Licensee General Information</div></td></tr>
+                <tr>
+                    <td style="width: 50%; vertical-align: top;">
+                        <table>
+
+                            <tr>
+                                <td style="vertical-align: top; text-align:left;">
+                                   <div>
+                                       <div style="float:left;">
+
+                                    <div style="display: none;">
+                                        <div class="sectionSubHeader">Active License</div>
+                                        <table class="table tableSmallLicGeneralInfo" cellspacing="0" border="0" id="ctl00_ContentPlaceHolder1_dtgActiveLicenses" style="border-collapse:collapse;">
+	<tr>
+		<td class="th">Reason Code</td><td class="th">License Number</td><td class="th">Subcategory</td><td class="th">Issue Date</td><td class="th">Expire Date</td>
+	</tr><tr>
+		<td class="td">&nbsp;</td><td class="td">2012-00426</td><td class="td">&nbsp;</td><td class="td">03/20/2012</td><td class="td">&nbsp;</td>
+	</tr>
+</table>
+                                        <div class="sectionSubHeader">Inactive License</div>
+
+                                    </div>
+                                    <div id="ctl00_ContentPlaceHolder1_divSupervisor" style="display:none;">
+                                        <div class="sectionSubHeader">Active Supervisor</div>
+
+                                    </div>
+                                    <div id="ctl00_ContentPlaceHolder1_divSupervisee" style="display:none;">
+                                        <div class="sectionSubHeader">Active Supervisee</div>
+
+                                    </div>
+                                    <div class="sectionSubHeader">North Carolina Hospital Admitting Privileges</div>
+                                    <table class="table tableSmallLicGeneralInfo" cellspacing="0" border="0" id="ctl00_ContentPlaceHolder1_dtgHospitals" style="border-collapse:collapse;">
+	<tr>
+		<td>FirstHealth Moore Reg. Hosp. and Pinehurst Treatment</td>
+	</tr><tr>
+		<td>University of North Carolina Hospitals</td>
+	</tr>
+</table>
+                                    <div class="sectionSubHeader">Out of State Active/Inactive Licenses</div>
+                                    <table class="table tableSmallLicGeneralInfo" cellspacing="0" border="0" id="ctl00_ContentPlaceHolder1_dtgOutOfState" style="border-collapse:collapse;">
+	<tr>
+		<td>None Reported</td>
+	</tr>
+</table>
+                                    <div class="sectionSubHeader">Out of Country Active/Inactive Licenses</div>
+                                    <table class="table tableSmallLicGeneralInfo" cellspacing="0" border="0" id="ctl00_ContentPlaceHolder1_dtgOutOfCountry" style="border-collapse:collapse;">
+	<tr>
+		<td>None Reported</td>
+	</tr>
+</table>
+                                           </div>
+                                    <div id="pic">
+                                        <img src="#" id="ctl00_ContentPlaceHolder1_imgPhoto" alt="Applicant Photo" style="width:200px;height:auto;display:none;" />
+                                    </div>
+                                       <div style="float: clear;"></div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="divDetails2" class="divDetails Selected" style="text-align:left;">
+            <div class="sectionHeader">Practice Information</div>
+            <div class="sectionSubHeader">Address</div>
+            <div class="divData" style="display:inline-block; width:60%;">
+                <table class="tableVAlign">
+                    <tr>
+                        <td style="width: 300px;">
+                            <span id="ctl00_ContentPlaceHolder1_lblStreet1">UNC Div of Pediatric Hematology/Oncology<br /></span>
+                            <span id="ctl00_ContentPlaceHolder1_lblStreet2">170 Manning Drive<br /></span>
+                            <span id="ctl00_ContentPlaceHolder1_lblStreet3">CB 7236<br /></span>
+                            <span id="ctl00_ContentPlaceHolder1_lblCityStateZip">Chapel Hill, NC 27599</span>
+                        </td>
+                        <td>
+                            <span id="ctl00_ContentPlaceHolder1_lblPracPhone">(919) 966-1178<br /></span>
+                            <span id="ctl00_ContentPlaceHolder1_lblWWW"></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="ctl00_ContentPlaceHolder1_divOtherPracticeInfo">
+                <div class="sectionSubHeader">Information</div>
+                <div class="divData" >
+                    <b>Days patients are seen at this practice:</b>
+                    <span id="ctl00_ContentPlaceHolder1_lblDaysPatientsSeen"></span>
+                    <br />
+                    <b>Practice philosophy:</b>
+                    <span id="ctl00_ContentPlaceHolder1_lblPracticePhilosophy"></span>
+                    <br />
+                    <b>Non-English languages in which office is able to provide clinical services (e.g.
+                        Hindi, Spanish):</b>
+                    <span id="ctl00_ContentPlaceHolder1_lblOfficeLanguage"></span>
+                    <br />
+                    <b>Non-English languages in which practitioner is able to provide clinical services
+                        (e.g. Hindi, Spanish):</b>
+                    <span id="ctl00_ContentPlaceHolder1_lblPractitionerLanguage"></span>
+                    <br />
+                    <b>Participates in Medicare:</b>
+                    <span id="ctl00_ContentPlaceHolder1_lblMedicare"></span>
+                    <br />
+                    <b>Accepting new Medicare Patients:</b>
+                    <span id="ctl00_ContentPlaceHolder1_lblNewMedicare"></span>
+                    <br />
+                    <b>Participates in Medicaid:</b>
+                    <span id="ctl00_ContentPlaceHolder1_lblNCMedicare"></span>
+                    <br />
+                    <b>Accepting new Medicaid Patients:</b>
+                    <span id="ctl00_ContentPlaceHolder1_lblNCNewMedicare"></span>
+                    <br />
+                    <b>Uses electronic medical records:</b>
+                    <span id="ctl00_ContentPlaceHolder1_lblElectronicRecords"></span>
+                </div>
+            </div>
+        </div>
+        <div id="divDetails3" class="divDetails Selected" style="text-align:left;">
+            <div class="sectionHeader">
+                <span id="ctl00_ContentPlaceHolder1_lblEducationSectionHeader">Education, Certifications & Area of Practice</span>
+            </div>
+            <div class="sectionSubHeader">
+                <span id="ctl00_ContentPlaceHolder1_lblEducationMedSchool">Medical School</span>
+            </div>
+            <table class="table" cellspacing="0" border="0" id="ctl00_ContentPlaceHolder1_dtgMedSchool" style="width:550px;border-collapse:collapse;">
+	<tr>
+		<td style="width:400px;">University of Miami School of Medicine</td><td style="width:150px;">Year of Graduation:</td><td>2009</td>
+	</tr>
+</table>
+            <div id="ctl00_ContentPlaceHolder1_divEducationPostGrad">
+                <div class="sectionSubHeader">Post Graduate Training</div>
+                <div class="divData">
+                    <div id="ctl00_ContentPlaceHolder1_divEducationPostGradInsert1">
+                        "Last Year of Training" does not necessarily mean that the licensee completed his/her
+                        training program.  (In NC, a physician can be licensed without completing such a
+                        program.)
+                    </div>
+                    <div id="ctl00_ContentPlaceHolder1_divEducationPostGradInsert2" style="display:none;">
+                        None Reported
+                    </div>
+                </div>
+                <table class="table" cellspacing="0" border="0" id="ctl00_ContentPlaceHolder1_dtgPostGrad" style="border-collapse:collapse;">
+	<tr>
+		<td class="th">Institution</td><td class="th">Specialty</td><td class="th">State</td><td class="th">Country</td><td class="th">Training Program</td><td class="th">Last Year of Training</td>
+	</tr><tr>
+		<td class="td">University of North Carolina</td><td class="td">Pediatric Hematology/Oncology</td><td class="td">NC</td><td class="td">USA</td><td class="td">Fellowship</td><td class="td">2015</td>
+	</tr><tr>
+		<td class="td">University of Miami/Jackson Memorial Hospital</td><td class="td">Pediatrics</td><td class="td">FL</td><td class="td">USA</td><td class="td">Residency</td><td class="td">2012</td>
+	</tr><tr>
+		<td class="td">University of Miami/Jackson Memorial Hospital</td><td class="td">Pediatrics</td><td class="td">FL</td><td class="td">USA</td><td class="td">Internship</td><td class="td">2010</td>
+	</tr>
+</table>
+            </div>
+            <div id="ctl00_ContentPlaceHolder1_divEducationABMS">
+                <div class="sectionSubHeader">
+                    Current Board Certification and Year of Certification/Recertification
+                </div>
+                <div class="divData">
+                    Physicians should not list non-ABMS or non-AOA specialty boards unless the board meets the
+                    criteria set forth in the NC Medical Board’s Advertising and Publicity Position Statement.
+                    <br />
+                    <br />
+                    <div id="ctl00_ContentPlaceHolder1_divEducationABMSInsert1" style="display:none;">
+                        None Reported
+                    </div>
+                </div>
+                <table class="table" cellspacing="0" border="0" id="ctl00_ContentPlaceHolder1_dtgABMS" style="border-collapse:collapse;">
+	<tr>
+		<td class="th">Primary/Subspecialty</td><td class="th">Year</td>
+	</tr><tr>
+		<td class="td" style="width:400px;">Pediatrics</td><td class="td">2012</td>
+	</tr>
+</table>
+            </div>
+            <div class="sectionSubHeader">Area of Practice</div>
+            <div id="ctl00_ContentPlaceHolder1_divEducationAOPInsert1" class="divData" style="display:none;">
+                None Reported
+            </div>
+            <table class="table" cellspacing="0" border="0" id="ctl00_ContentPlaceHolder1_dtgAOP" style="border-collapse:collapse;">
+	<tr>
+		<td class="th">Area Of Practice</td><td class="th">Primary Area of Practice</td>
+	</tr><tr>
+		<td class="td" style="width:400px;">Pediatric Hematology-Oncology</td><td class="td">
+                            Yes
+                        </td>
+	</tr><tr>
+		<td class="td" style="width:400px;">Pediatrics</td><td class="td">
+
+                        </td>
+	</tr>
+</table>
+        </div>
+        <div id="divDetails4" class="divDetails Selected" style="text-align:left;">
+            <div class="sectionHeader">Membership, Honors, Awards & Public Service</div>
+            <div class="sectionSubHeader">
+                Current Membership in Medical Professional Organizations
+            </div>
+            <div id="ctl00_ContentPlaceHolder1_divMembershipInsert1" class="divData">
+                None Reported
+            </div>
+
+            <div class="sectionSubHeader">Honors and Awards</div>
+            <div id="ctl00_ContentPlaceHolder1_divMembershipHonorsInsert1" class="divData">
+                None Reported
+            </div>
+
+            <div class="sectionSubHeader">Professional Service</div>
+            <div id="ctl00_ContentPlaceHolder1_divMembershipServiceInsert1" class="divData">
+                None Reported
+            </div>
+
+        </div>
+        <div id="divDetails5" class="divDetails Selected" style="text-align:left;">
+            <div class="sectionHeader">Academic Appointments & Publications</div>
+            <div class="sectionSubHeader">
+                Current Academic Appointments
+            </div>
+            <div id="ctl00_ContentPlaceHolder1_divAppointmentsInsert1" class="divData">
+                None Reported
+            </div>
+
+            <div class="sectionSubHeader">Publications</div>
+            <div id="ctl00_ContentPlaceHolder1_divPublicationsInsert1" class="divData">
+                None Reported
+            </div>
+
+        </div>
+        <div id="divDetails6" class="divDetails Selected" style="text-align:left;">
+            <div class="sectionHeader">Section 1. Adverse Actions</div>
+            <div class="sectionSubHeader">North Carolina Medical Board Public Actions</div>
+            <div class="divData">
+                <div id="ctl00_ContentPlaceHolder1_divActionsInsert1" style="display:none;">
+                    This section indicates whether the North Carolina Medical Board has taken adverse public action regarding the licensee. Click on the link or links below to see an electronic copy of public documents associated with the licensee.
+                    <br />
+                    <br />
+                    Certain public documents, such as hearing transcripts, are listed but are not posted on the site. If the record indicates a transcript is available, it may be obtained by contacting the Board.
+                    <br />
+                    <br />
+                    NCMB public actions are posted on this site indefinitely.
+                </div>
+                <div id="ctl00_ContentPlaceHolder1_divActionsInsert2">
+                    None Reported
+                </div>
+            </div>
+
+            <div class="sectionSubHeader">Other Regulatory Board or Agency Public Actions</div>
+            <div class="divData">
+                <div id="ctl00_ContentPlaceHolder1_divRegualtoryInsert1" style="display:none;">
+                    This section indicates whether a regulatory authority other than NCMB has taken
+                    public action against the licensee.  Out-of-state medical board actions are posted
+                    on this website indefinitely.  Actions by regulatory agencies such as Medicare,
+                    Medicaid, the U.S. Drug Enforcement Administration, the U.S. Food and Drug Administration,
+                    etc., are posted for a period of seven years, from the date of the action.
+                </div>
+                <div id="ctl00_ContentPlaceHolder1_divRegualtoryInsert2">
+                    None Reported
+                </div>
+            </div>
+
+            <div class="sectionSubHeader">
+                Health Care Institution Suspensions and Revocations
+            </div>
+            <div class="divData">
+                <div id="ctl00_ContentPlaceHolder1_divPrivilegesInsert1" style="display:none;">
+                    This section indicates whether any hospital or healthcare institution has issued
+                    a final suspensions or revocation of privileges or credentials regarding a licensee.
+                    A suspension or revocation is considered final only when all avenues of appeal available
+                    to the licensee within the hospital or healthcare institution have been exhausted.
+                    <br />
+                    <br />
+                    Healthcare institution actions appear on this site for seven years from the date
+                    of the final suspension or revocation.
+                </div>
+                <div id="ctl00_ContentPlaceHolder1_divPrivilegesInsert2">
+                    None Reported
+                </div>
+            </div>
+
+            <br />
+            <br />
+            <div class="sectionHeader">Section 2. Administrative Actions</div>
+            <div class="divSection2Insert1">Actions listed in this section are considered non-disciplinary by the Board. In situations where administrative actions are taken, the licensee may not have met certain statutory requirements or may have failed to follow correct administrative procedures.</div>
+            <div class="sectionSubHeader">North Carolina Medical Board Reentry Agreement</div>
+            <div class="divData">
+                <div id="ctl00_ContentPlaceHolder1_divReEntryInsert1" style="display:none;">
+                    The NCMB requires license applicants who have not actively practiced clinical medicine for two or more years to complete a program of reentry to demonstrate that they are competent to practice.  A reentry candidate must complete a period of practice under the supervision of an approved mentor before he or she can obtain a full and unrestricted license.
+                </div>
+                <div id="ctl00_ContentPlaceHolder1_divReEntryInsert2">
+                    None Reported
+                </div>
+            </div>
+
+
+            <!-- spk-->
+
+            <div class="sectionSubHeader">North Carolina Special Purpose Licensing Agreement</div>
+            <div class="divData">
+                <div id="ctl00_ContentPlaceHolder1_divSpecialPurposeInsert1" style="display:none;">
+                    The Special Purpose License is for physicians who wish to come to North Carolina for a limited time, scope and purpose, such as to demonstrate, train or learn a new technique, procedure or piece of equipment, or to educate physicians or medical students.
+                </div>
+                <div id="ctl00_ContentPlaceHolder1_divSpecialPurposeInsert2">
+                    None Reported
+                </div>
+            </div>
+
+
+
+
+            <!-- spk -->
+        </div>
+        <div id="divDetails7" class="divDetails Selected" style="text-align:left;">
+            <div class="sectionHeader">Malpractice</div>
+            <div class="sectionSubHeader">Malpractice Information</div>
+            <div id="ctl00_ContentPlaceHolder1_divMalpracticeInsert1" class="divData" style="display:none;">
+                This section indicates whether a malpractice payment has been made on behalf of
+                the licensee. In accordance with North Carolina law, the Board posts on this website:
+                1. Malpractice judgments and awards that occurred within the last seven years and
+                2. Settlements of $75,000 or more that occurred on or after May 1, 2008. Payment
+                information is displayed for seven years (from the date of the judgment, award or
+                settlement).
+                <br />
+                <br />
+                The Board encourages the public to consider malpractice payment information in context
+                and in combination with other information about the licensee’s education, training
+                and professional experience.
+                <br />
+                <br />
+                Please see <b>Interpreting Malpractice Payment Information</b> below.
+                <br />
+                <br />
+            </div>
+            <div id="ctl00_ContentPlaceHolder1_divMalpracticeInsert2" class="divData">
+                None Reported
+            </div>
+
+            <div id="ctl00_ContentPlaceHolder1_divMalpracticeInsert3" class="divData" style="display:none;">
+                <b>Interpreting Malpractice Payment Information
+                    <br />
+                    <br />
+                    North Carolina Medical Board Public Action associated with a malpractice payment</b>
+                <br />
+                <br />
+                An important factor to consider when interpreting malpractice payment information
+                is whether the payment is associated with a public action of the NC Medical Board.
+                The Board reviews the quality of care associated with every malpractice payment
+                involving a North Carolina licensee. The Board takes public action when its investigation
+                determines patient care was below accepted and prevailing standards.
+                <br />
+                <br />
+                <b>When considering malpractice payment data, please keep in mind:</b>
+                <table style="margin-left: 20px;" cellpadding="3" cellspacing="0" class="tableVAlign">
+                    <tr>
+                        <td>&#9900;</td>
+                        <td>The existence of a payment does not necessarily mean that malpractice has occurred.
+                            Nor is a payment necessarily evidence of incompetence, misconduct or an admission
+                            of wrongdoing on the part of the licensee.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&#9900;</td>
+                        <td>It often takes years for a malpractice claim to move through the legal and/or liability
+                            insurance systems.  The incident that resulted in a payment may have taken place
+                            years before the payment was made.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&#9900;</td>
+                        <td>Malpractice payment histories vary by area of practice. Some licensees may have
+                            a higher-than-average incidence of malpractice payments because they specialize
+                            in treating patients who are at a high risk for problems.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&#9900;</td>
+                        <td>Malpractice insurance companies sometimes settle cases because it is less costly
+                            to make a monetary settlement than it is to defend a case in court.  Many times,
+                            such cases are settled without a finding of fault or admission of negligence by
+                            the licensee.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="divDetails8" class="divDetails Selected" style="text-align:left;">
+            <div class="sectionHeader">Convictions</div>
+            <div class="sectionSubHeader">Misdemeanor/DUI/DWI Conviction Information</div>
+            <div id="ctl00_ContentPlaceHolder1_divMisdemeanorInsert1" class="divData" style="display:none;">
+                This section indicates whether the licensee has been convicted of certain misdemeanor
+                crimes. The Board posts misdemeanor convictions that involve offenses against a
+                person, offenses of moral turpitude, offenses involving the use of drugs or alcohol
+                and violations of public health and safety codes on this website. Information about
+                misdemeanors remains on this site for 10 years (from the date of the conviction).
+            </div>
+            <div id="ctl00_ContentPlaceHolder1_divMisdemeanorInsert2" class="divData">
+                None Reported
+            </div>
+
+            <div class="sectionSubHeader">Felony Conviction Information</div>
+            <div id="ctl00_ContentPlaceHolder1_divFelonyInsert1" class="divData" style="display:none;">
+                This section indicates whether the licensee has any felony convictions. Information
+                about felony convictions remains on this website indefinitely.
+            </div>
+            <div id="ctl00_ContentPlaceHolder1_divFelonyInsert2" class="divData">
+                None Reported
+            </div>
+
+        </div>
+    </div>
+
+    <img class="blockImage hideOnPrint" src="../../Images/WrapperBottom.png" style="border-width:0px;" />
+
+     </div>
+    <br />
+
+            </div>
+        </div>
+    </form>
+</body>
+</html>
