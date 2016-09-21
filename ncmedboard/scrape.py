@@ -4,10 +4,7 @@ from BeautifulSoup import BeautifulSoup
 
 #EXCEPTIONS TO ADD:
 #if td_tblLicenseeInfo_1_3 text == Denied, do not do any of this
-#get the denied documents 
-
-
-
+#get the denied documents
 
 url = 'http://wwwapps.ncmedboard.org/Clients/NCBOM/Public/LicenseeInformation/Details.aspx?&EntityID=3200624&PublicFile=1'
 
