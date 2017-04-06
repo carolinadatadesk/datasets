@@ -1,5 +1,6 @@
 library(tidyverse)
 
+# link used to test function
 #link <- c("http://www.goheels.com/ViewContent.dbml?SPSID=668156&SPID=12965&DB_LANG=C&SITE=UNC&DB_OEM_ID=3350&CONTENT_ID=1981870")
 
 # function to scrape data from play-by-play url
